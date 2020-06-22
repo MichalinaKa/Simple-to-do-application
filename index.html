@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First to-do list ;)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>daily care</h1>
+        <ul class="todoList jsTodoList"></ul>
+
+        <div class="empty-state">
+          <h2 class="empty-state__title">
+            "How will you take care of yourself this week?"
+          </h2>
+          <p class="empty-state__description"></p>
+          <p class="empty-state__description">
+            This simple app is to add your daily habits on one lists to have
+            them always ready to remember.<br />
+            Take care of yourself &hearts;
+            <br />
+          </p>
+        </div>
+        <form class="jsForm">
+          <input
+            autofocus
+            type="text"
+            aria-label="Enter a new todo item"
+            placeholder="E.g. Do the yoga 15 min "
+            class="jsForm--input"
+          />
+        </form>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

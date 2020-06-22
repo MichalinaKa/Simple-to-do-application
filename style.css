@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.4;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.container h1 {
+  padding: 50px;
+  color: coral;
+}
+
+.todoList {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todoItem {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoItem span {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 18px;
+  text-align: start;
+}
+
+.jsForm--input {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  border: 2px solid coral;
+  margin-bottom: 100px;
+  width: 30vw;
+  height: 5vh;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* copied */
+input[type="checkbox"] {
+  display: none;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tick::before {
+  content: "✓";
+  font-size: 20px;
+  display: none;
+  color: coral;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.delete-todo svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty-state__title,
+.empty-state__description {
+  margin-bottom: 20px;
+}
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+/* Add this below the other styles */
+.todoList:empty {
+  display: none;
+}
+
+.todoList:empty + .empty-state {
+  display: flex;
+}
